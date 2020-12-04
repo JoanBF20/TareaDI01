@@ -8,7 +8,7 @@ using Dapper;
 
 namespace TareaDI01
 {
-    class DataAcces
+    public class DataAcces
     {
         public List<Product> GetAllProducts()
         {

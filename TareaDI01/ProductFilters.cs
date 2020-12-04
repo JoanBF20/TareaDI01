@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TareaDI01
 {
-    class ProductFilters
+    public class ProductFilters
     {
         public string Name { get; set; }
         public ProductFilters(string Name)

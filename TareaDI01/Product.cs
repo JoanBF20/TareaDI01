@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TareaDI01
 {
-    class Product
+    public class Product
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
@@ -14,8 +14,8 @@ namespace TareaDI01
         public bool MakeFlag { get; set; }
         public bool FinishedGoodsFlag { get; set; }
         public string Color { get; set; }
-        public int SafteyStockLevel { get; set; }
-        public int RecorderPoint { get; set; }
+        public int SafetyStockLevel { get; set; }
+        public int ReorderPoint { get; set; }
         public decimal StandardCost { get; set; }
         public decimal ListPrice { get; set; }
         public string Size { get; set; }
@@ -39,7 +39,7 @@ namespace TareaDI01
             get
             {
                 return $"{ProductID} - {Name}, {ProductNumber}, {MakeFlag}, {FinishedGoodsFlag} , {Color}, " +
-                    $"{SafteyStockLevel}, {RecorderPoint}, {StandardCost}€, {ListPrice}€, {Size}, {SizeUnitMeasureCode}, "+
+                    $"{SafetyStockLevel}, {ReorderPoint}, {StandardCost}€, {ListPrice}€, {Size}, {SizeUnitMeasureCode}, "+
                     $"{WeightUnitMeasureCode}, {Weight}, {DaysToManufacture}, {ProductLine}, {Class}, {Style}, "+
                     $"{ProductSubcategoryID}, {ProductModelID}, {ProductModelID}, {SellStartDate}, {SellEndDate}, " +
                     $"{DiscontinuedDate}, {rowguid}, {ModifiedDate}";

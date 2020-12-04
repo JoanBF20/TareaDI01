@@ -12,7 +12,6 @@ namespace TareaDI01
 {
     public partial class Form1 : Form
     {
-        private int defaultResultsPerPage = 28;
         private bool update = true; 
 
         ProductFilters filters;
@@ -22,16 +21,12 @@ namespace TareaDI01
         {
             InitializeComponent();
             DataAcces db = new DataAcces();
-            numericUpDown1.Minimum = 1;
-            resultsPerPage.SelectedIndex = 2;
-            filters = new ProductFilters(textBox1.Text);
-            products = db.GetProducts(defaultResultsPerPage, 0, filters);
             dataGridView1.DataSource = products;
-            int countProducts = db.CountProducts(filters);
-            dataGridView1.Show();
-            numericUpDown1.Maximum = countProducts / defaultResultsPerPage;
-            label2.Text = "de " + countProducts / defaultResultsPerPage;
-
+            update = false;
+            numericUpDown1.Minimum = 1;
+            update = false;
+            resultsPerPage.SelectedIndex = 2;
+            updateData();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -47,7 +42,7 @@ namespace TareaDI01
         private void updateData()
         {
             Console.WriteLine("tryupdate");
-            if (resultsPerPage.SelectedIndex > 0 && update)
+            if (update)
             {
                 DataAcces db = new DataAcces();
                 filters = new ProductFilters(textBox1.Text);
@@ -76,6 +71,13 @@ namespace TareaDI01
             {
                 updateData();
             }
+        }
+
+        private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+        Product product = products[e.RowIndex];
+        Edit EditForm = new Edit(product);
+        EditForm.Show();
         }
     }
 }
