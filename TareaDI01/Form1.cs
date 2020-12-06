@@ -20,6 +20,9 @@ namespace TareaDI01
         public Form1()
         {
             InitializeComponent();
+            filters = new ProductFilters("");
+            foreach (string item in filters.ListFilters)
+                comboFilter.Items.Add(item);
             DataAcces db = new DataAcces();
             dataGridView1.DataSource = products;
             update = false;
@@ -41,11 +44,12 @@ namespace TareaDI01
 
         private void updateData()
         {
-            Console.WriteLine("tryupdate");
             if (update)
             {
                 DataAcces db = new DataAcces();
-                filters = new ProductFilters(textBox1.Text);
+                filters = new ProductFilters(textBox1.Text.Replace("'", ""));
+                filters.Filter = comboFilter.Text;
+                filters.FilterValue = comboSelectedFilter.Text;
                 int page = (int)numericUpDown1.Value - 1;
                 if ((int)numericUpDown1.Value - 1 < 0)
                     page = (int)numericUpDown1.Value;
@@ -78,6 +82,45 @@ namespace TareaDI01
         Product product = products[e.RowIndex];
         Edit EditForm = new Edit(product);
         EditForm.Show();
+        }
+
+        private void comboFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].DefaultCellStyle.BackColor = Color.White;
+                if (dataGridView1.Columns[i].HeaderText == comboFilter.Text)
+                {
+                    dataGridView1.Columns[i].DefaultCellStyle.BackColor = Color.AliceBlue;
+                    DataAcces db = new DataAcces();
+                    List<string> resultFilter = db.getDisctinctCol(filters, comboFilter.Text);
+                    comboSelectedFilter.Items.Clear();
+                    foreach (string item in resultFilter)
+                    {
+
+                        if (item != null)
+                        {
+                            comboSelectedFilter.Items.Add(item);
+
+                        } else
+                        {
+                            comboSelectedFilter.Items.Add("NULL");
+
+                        }
+                    }
+                }
+                if (comboFilter.Text == "")
+                {
+                    comboSelectedFilter.Items.Clear();
+                    comboSelectedFilter.Text = "";
+                    updateData();
+                }
+            }
+        }
+
+        private void comboSelectedFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateData();
         }
     }
 }

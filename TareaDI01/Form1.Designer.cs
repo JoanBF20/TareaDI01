@@ -30,16 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.resultsPerPage = new System.Windows.Forms.ComboBox();
-            this.resultsPerPageText = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +55,22 @@
             this.discontinuedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rowguidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modifiedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.resultsPerPage = new System.Windows.Forms.ComboBox();
+            this.resultsPerPageText = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboFilter = new System.Windows.Forms.ComboBox();
+            this.comboSelectedFilter = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -112,97 +115,14 @@
             this.dataGridView1.DataSource = this.productBindingSource2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(12, 50);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1262, 505);
+            this.dataGridView1.Size = new System.Drawing.Size(1261, 820);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(70, 578);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 22);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 578);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Pagina";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 578);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "de";
-            // 
-            // resultsPerPage
-            // 
-            this.resultsPerPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultsPerPage.FormattingEnabled = true;
-            this.resultsPerPage.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "28",
-            "50"});
-            this.resultsPerPage.Location = new System.Drawing.Point(1071, 578);
-            this.resultsPerPage.Name = "resultsPerPage";
-            this.resultsPerPage.Size = new System.Drawing.Size(54, 24);
-            this.resultsPerPage.TabIndex = 4;
-            this.resultsPerPage.SelectedIndexChanged += new System.EventHandler(this.resultsPerPage_SelectedIndexChanged);
-            // 
-            // resultsPerPageText
-            // 
-            this.resultsPerPageText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultsPerPageText.AutoSize = true;
-            this.resultsPerPageText.Location = new System.Drawing.Point(1131, 578);
-            this.resultsPerPageText.Name = "resultsPerPageText";
-            this.resultsPerPageText.Size = new System.Drawing.Size(134, 17);
-            this.resultsPerPageText.TabIndex = 5;
-            this.resultsPerPageText.Text = "resultats per pagina";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(72, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 22);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Cercar:";
-            // 
-            // productBindingSource2
-            // 
-            this.productBindingSource2.DataSource = typeof(TareaDI01.Product);
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataSource = typeof(TareaDI01.Product);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(TareaDI01.Product);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -429,11 +349,133 @@
             this.modifiedDateDataGridViewTextBoxColumn.ReadOnly = true;
             this.modifiedDateDataGridViewTextBoxColumn.Width = 125;
             // 
+            // productBindingSource2
+            // 
+            this.productBindingSource2.DataSource = typeof(TareaDI01.Product);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.Location = new System.Drawing.Point(69, 894);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(47, 22);
+            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 894);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Pagina";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(123, 894);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "de";
+            // 
+            // resultsPerPage
+            // 
+            this.resultsPerPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultsPerPage.FormattingEnabled = true;
+            this.resultsPerPage.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "28",
+            "50"});
+            this.resultsPerPage.Location = new System.Drawing.Point(1071, 894);
+            this.resultsPerPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.resultsPerPage.Name = "resultsPerPage";
+            this.resultsPerPage.Size = new System.Drawing.Size(55, 24);
+            this.resultsPerPage.TabIndex = 4;
+            this.resultsPerPage.SelectedIndexChanged += new System.EventHandler(this.resultsPerPage_SelectedIndexChanged);
+            // 
+            // resultsPerPageText
+            // 
+            this.resultsPerPageText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultsPerPageText.AutoSize = true;
+            this.resultsPerPageText.Location = new System.Drawing.Point(1131, 894);
+            this.resultsPerPageText.Name = "resultsPerPageText";
+            this.resultsPerPageText.Size = new System.Drawing.Size(134, 17);
+            this.resultsPerPageText.TabIndex = 5;
+            this.resultsPerPageText.Text = "resultats per pagina";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(72, 12);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(340, 22);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cercar:";
+            // 
+            // comboFilter
+            // 
+            this.comboFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboFilter.FormattingEnabled = true;
+            this.comboFilter.Location = new System.Drawing.Point(858, 11);
+            this.comboFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboFilter.Name = "comboFilter";
+            this.comboFilter.Size = new System.Drawing.Size(196, 24);
+            this.comboFilter.TabIndex = 8;
+            this.comboFilter.SelectedIndexChanged += new System.EventHandler(this.comboFilter_SelectedIndexChanged);
+            // 
+            // comboSelectedFilter
+            // 
+            this.comboSelectedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboSelectedFilter.FormattingEnabled = true;
+            this.comboSelectedFilter.Location = new System.Drawing.Point(1060, 11);
+            this.comboSelectedFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboSelectedFilter.Name = "comboSelectedFilter";
+            this.comboSelectedFilter.Size = new System.Drawing.Size(213, 24);
+            this.comboSelectedFilter.TabIndex = 9;
+            this.comboSelectedFilter.SelectedIndexChanged += new System.EventHandler(this.comboSelectedFilter_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(803, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Filtres:";
+            // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataSource = typeof(TareaDI01.Product);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(TareaDI01.Product);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 621);
+            this.ClientSize = new System.Drawing.Size(1285, 937);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboSelectedFilter);
+            this.Controls.Add(this.comboFilter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.resultsPerPageText);
@@ -442,12 +484,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(861, 481);
             this.Name = "Form1";
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -494,6 +538,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn discontinuedDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rowguidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modifiedDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboFilter;
+        private System.Windows.Forms.ComboBox comboSelectedFilter;
+        private System.Windows.Forms.Label label4;
     }
 }
 
