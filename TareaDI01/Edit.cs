@@ -19,9 +19,9 @@ namespace TareaDI01
         public Edit(Product product)
         {
             this.productModel = product;
-            this.Text = "Editar " + product.ProductModel;
             ProductNumbers = product.ProductNumber.Split(new char[] { ';' }).ToList();
             InitializeComponent();
+            this.Text = "Editar " + product.ProductModel;
             setData();
 
         }

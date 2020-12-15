@@ -221,7 +221,7 @@
             this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            this.descriptionDataGridViewTextBoxColumn.Width = 460;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -248,7 +248,7 @@
             this.colorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
             this.colorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.colorDataGridViewTextBoxColumn.Width = 125;
+            this.colorDataGridViewTextBoxColumn.Width = 90;
             // 
             // listPriceDataGridViewTextBoxColumn
             // 
@@ -257,7 +257,7 @@
             this.listPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.listPriceDataGridViewTextBoxColumn.Name = "listPriceDataGridViewTextBoxColumn";
             this.listPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.listPriceDataGridViewTextBoxColumn.Width = 125;
+            this.listPriceDataGridViewTextBoxColumn.Width = 90;
             // 
             // sizeDataGridViewTextBoxColumn
             // 
@@ -266,7 +266,6 @@
             this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
             this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 125;
             // 
             // productLineDataGridViewTextBoxColumn
             // 
@@ -275,7 +274,7 @@
             this.productLineDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productLineDataGridViewTextBoxColumn.Name = "productLineDataGridViewTextBoxColumn";
             this.productLineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productLineDataGridViewTextBoxColumn.Width = 125;
+            this.productLineDataGridViewTextBoxColumn.Width = 75;
             // 
             // classDataGridViewTextBoxColumn
             // 
@@ -284,7 +283,7 @@
             this.classDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
             this.classDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classDataGridViewTextBoxColumn.Width = 125;
+            this.classDataGridViewTextBoxColumn.Width = 45;
             // 
             // styleDataGridViewTextBoxColumn
             // 
@@ -293,7 +292,7 @@
             this.styleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.styleDataGridViewTextBoxColumn.Name = "styleDataGridViewTextBoxColumn";
             this.styleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.styleDataGridViewTextBoxColumn.Width = 125;
+            this.styleDataGridViewTextBoxColumn.Width = 45;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
@@ -302,7 +301,7 @@
             this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            this.categoryDataGridViewTextBoxColumn.Width = 80;
             // 
             // subCategoryDataGridViewTextBoxColumn
             // 
