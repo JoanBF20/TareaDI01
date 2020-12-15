@@ -40,7 +40,6 @@
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.comboSelectedFilter = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@
             this.styleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -201,10 +201,6 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Filtres:";
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(TareaDI01.Product);
-            // 
             // productModelDataGridViewTextBoxColumn
             // 
             this.productModelDataGridViewTextBoxColumn.DataPropertyName = "ProductModel";
@@ -266,6 +262,7 @@
             this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
             this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sizeDataGridViewTextBoxColumn.Width = 125;
             // 
             // productLineDataGridViewTextBoxColumn
             // 
@@ -312,6 +309,10 @@
             this.subCategoryDataGridViewTextBoxColumn.ReadOnly = true;
             this.subCategoryDataGridViewTextBoxColumn.Width = 125;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(TareaDI01.Product);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -329,7 +330,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(861, 481);
+            this.MinimumSize = new System.Drawing.Size(961, 481);
             this.Name = "Form1";
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
