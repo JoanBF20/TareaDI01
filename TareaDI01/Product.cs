@@ -8,41 +8,26 @@ namespace TareaDI01
 {
     public class Product
     {
-        public int ProductID { get; set; }
-        public string Name { get; set; }
-        public string ProductNumber { get; set; }
-        public bool MakeFlag { get; set; }
-        public bool FinishedGoodsFlag { get; set; }
-        public string Color { get; set; }
-        public int SafetyStockLevel { get; set; }
-        public int ReorderPoint { get; set; }
-        public decimal StandardCost { get; set; }
-        public decimal ListPrice { get; set; }
-        public string Size { get; set; }
-        public string SizeUnitMeasureCode { get; set; }
-        public string WeightUnitMeasureCode { get; set; }
-        public decimal Weight { get; set; }
-        public int DaysToManufacture { get; set; }
-        public string ProductLine { get; set; }
-        public string Class { get; set; }
-        public string Style { get; set; }
-        public int ProductSubcategoryID { get; set; }
-        public int ProductModelID { get; set; }
-        public DateTime SellStartDate { get; set; }
-        public DateTime SellEndDate { get; set; }
-        public DateTime DiscontinuedDate { get; set; }
-        public Guid rowguid { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public String ProductModel { get; set; }
+        public String Description { get; set; }
+        public String Name { get; set; }
+        public String ProductNumber { get; set; }
+        public String Color { get; set; }
+        public String ListPrice { get; set; }
+        public String Size { get; set; }
+        public String ProductLine { get; set; }
+        public String Class { get; set; }
+        public String Style { get; set; }
+        public String Category { get; set; }
+        public String SubCategory { get; set; }
+
 
         public string FullInfo
         {
             get
             {
-                return $"{ProductID} - {Name}, {ProductNumber}, {MakeFlag}, {FinishedGoodsFlag} , {Color}, " +
-                    $"{SafetyStockLevel}, {ReorderPoint}, {StandardCost}€, {ListPrice}€, {Size}, {SizeUnitMeasureCode}, "+
-                    $"{WeightUnitMeasureCode}, {Weight}, {DaysToManufacture}, {ProductLine}, {Class}, {Style}, "+
-                    $"{ProductSubcategoryID}, {ProductModelID}, {ProductModelID}, {SellStartDate}, {SellEndDate}, " +
-                    $"{DiscontinuedDate}, {rowguid}, {ModifiedDate}";
+                return $"{ProductModel} - {Description}, {Name}, {ProductNumber}, {Color} , {ListPrice}€, " +
+                    $"{Size}, {ProductLine}, {Class}, {Style}, {Category}, {SubCategory}";
             }
         }
 

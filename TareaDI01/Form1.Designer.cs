@@ -30,32 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makeFlagDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.safetyStockLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reorderPointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.daysToManufactureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productLineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.styleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productSubcategoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productModelIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellStartDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellEndDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discontinuedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rowguidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modifiedDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,12 +40,21 @@
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.comboSelectedFilter = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productLineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.styleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,32 +70,19 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIDDataGridViewTextBoxColumn,
+            this.productModelDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.productNumberDataGridViewTextBoxColumn,
-            this.makeFlagDataGridViewCheckBoxColumn,
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn,
             this.colorDataGridViewTextBoxColumn,
-            this.safetyStockLevelDataGridViewTextBoxColumn,
-            this.reorderPointDataGridViewTextBoxColumn,
-            this.standardCostDataGridViewTextBoxColumn,
             this.listPriceDataGridViewTextBoxColumn,
             this.sizeDataGridViewTextBoxColumn,
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn,
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn,
-            this.weightDataGridViewTextBoxColumn,
-            this.daysToManufactureDataGridViewTextBoxColumn,
             this.productLineDataGridViewTextBoxColumn,
             this.classDataGridViewTextBoxColumn,
             this.styleDataGridViewTextBoxColumn,
-            this.productSubcategoryIDDataGridViewTextBoxColumn,
-            this.productModelIDDataGridViewTextBoxColumn,
-            this.sellStartDateDataGridViewTextBoxColumn,
-            this.sellEndDateDataGridViewTextBoxColumn,
-            this.discontinuedDateDataGridViewTextBoxColumn,
-            this.rowguidDataGridViewTextBoxColumn,
-            this.modifiedDateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productBindingSource2;
+            this.categoryDataGridViewTextBoxColumn,
+            this.subCategoryDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.Location = new System.Drawing.Point(12, 50);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -123,235 +93,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1261, 820);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productNumberDataGridViewTextBoxColumn
-            // 
-            this.productNumberDataGridViewTextBoxColumn.DataPropertyName = "ProductNumber";
-            this.productNumberDataGridViewTextBoxColumn.HeaderText = "ProductNumber";
-            this.productNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productNumberDataGridViewTextBoxColumn.Name = "productNumberDataGridViewTextBoxColumn";
-            this.productNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productNumberDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // makeFlagDataGridViewCheckBoxColumn
-            // 
-            this.makeFlagDataGridViewCheckBoxColumn.DataPropertyName = "MakeFlag";
-            this.makeFlagDataGridViewCheckBoxColumn.HeaderText = "MakeFlag";
-            this.makeFlagDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.makeFlagDataGridViewCheckBoxColumn.Name = "makeFlagDataGridViewCheckBoxColumn";
-            this.makeFlagDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.makeFlagDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // finishedGoodsFlagDataGridViewCheckBoxColumn
-            // 
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.DataPropertyName = "FinishedGoodsFlag";
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.HeaderText = "FinishedGoodsFlag";
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.Name = "finishedGoodsFlagDataGridViewCheckBoxColumn";
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.finishedGoodsFlagDataGridViewCheckBoxColumn.Width = 60;
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.colorDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // safetyStockLevelDataGridViewTextBoxColumn
-            // 
-            this.safetyStockLevelDataGridViewTextBoxColumn.DataPropertyName = "SafetyStockLevel";
-            this.safetyStockLevelDataGridViewTextBoxColumn.HeaderText = "SafetyStockLevel";
-            this.safetyStockLevelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.safetyStockLevelDataGridViewTextBoxColumn.Name = "safetyStockLevelDataGridViewTextBoxColumn";
-            this.safetyStockLevelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.safetyStockLevelDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // reorderPointDataGridViewTextBoxColumn
-            // 
-            this.reorderPointDataGridViewTextBoxColumn.DataPropertyName = "ReorderPoint";
-            this.reorderPointDataGridViewTextBoxColumn.HeaderText = "ReorderPoint";
-            this.reorderPointDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reorderPointDataGridViewTextBoxColumn.Name = "reorderPointDataGridViewTextBoxColumn";
-            this.reorderPointDataGridViewTextBoxColumn.ReadOnly = true;
-            this.reorderPointDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // standardCostDataGridViewTextBoxColumn
-            // 
-            this.standardCostDataGridViewTextBoxColumn.DataPropertyName = "StandardCost";
-            this.standardCostDataGridViewTextBoxColumn.HeaderText = "StandardCost";
-            this.standardCostDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.standardCostDataGridViewTextBoxColumn.Name = "standardCostDataGridViewTextBoxColumn";
-            this.standardCostDataGridViewTextBoxColumn.ReadOnly = true;
-            this.standardCostDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // listPriceDataGridViewTextBoxColumn
-            // 
-            this.listPriceDataGridViewTextBoxColumn.DataPropertyName = "ListPrice";
-            this.listPriceDataGridViewTextBoxColumn.HeaderText = "ListPrice";
-            this.listPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.listPriceDataGridViewTextBoxColumn.Name = "listPriceDataGridViewTextBoxColumn";
-            this.listPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.listPriceDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // sizeDataGridViewTextBoxColumn
-            // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // sizeUnitMeasureCodeDataGridViewTextBoxColumn
-            // 
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.DataPropertyName = "SizeUnitMeasureCode";
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.HeaderText = "SizeUnitMeasureCode";
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.Name = "sizeUnitMeasureCodeDataGridViewTextBoxColumn";
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sizeUnitMeasureCodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // weightUnitMeasureCodeDataGridViewTextBoxColumn
-            // 
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.DataPropertyName = "WeightUnitMeasureCode";
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.HeaderText = "WeightUnitMeasureCode";
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.Name = "weightUnitMeasureCodeDataGridViewTextBoxColumn";
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.weightUnitMeasureCodeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
-            this.weightDataGridViewTextBoxColumn.Width = 55;
-            // 
-            // daysToManufactureDataGridViewTextBoxColumn
-            // 
-            this.daysToManufactureDataGridViewTextBoxColumn.DataPropertyName = "DaysToManufacture";
-            this.daysToManufactureDataGridViewTextBoxColumn.HeaderText = "DaysToManufacture";
-            this.daysToManufactureDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.daysToManufactureDataGridViewTextBoxColumn.Name = "daysToManufactureDataGridViewTextBoxColumn";
-            this.daysToManufactureDataGridViewTextBoxColumn.ReadOnly = true;
-            this.daysToManufactureDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // productLineDataGridViewTextBoxColumn
-            // 
-            this.productLineDataGridViewTextBoxColumn.DataPropertyName = "ProductLine";
-            this.productLineDataGridViewTextBoxColumn.HeaderText = "ProductLine";
-            this.productLineDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productLineDataGridViewTextBoxColumn.Name = "productLineDataGridViewTextBoxColumn";
-            this.productLineDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productLineDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // classDataGridViewTextBoxColumn
-            // 
-            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
-            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.classDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
-            this.classDataGridViewTextBoxColumn.ReadOnly = true;
-            this.classDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // styleDataGridViewTextBoxColumn
-            // 
-            this.styleDataGridViewTextBoxColumn.DataPropertyName = "Style";
-            this.styleDataGridViewTextBoxColumn.HeaderText = "Style";
-            this.styleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.styleDataGridViewTextBoxColumn.Name = "styleDataGridViewTextBoxColumn";
-            this.styleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.styleDataGridViewTextBoxColumn.Width = 45;
-            // 
-            // productSubcategoryIDDataGridViewTextBoxColumn
-            // 
-            this.productSubcategoryIDDataGridViewTextBoxColumn.DataPropertyName = "ProductSubcategoryID";
-            this.productSubcategoryIDDataGridViewTextBoxColumn.HeaderText = "ProductSubcategoryID";
-            this.productSubcategoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productSubcategoryIDDataGridViewTextBoxColumn.Name = "productSubcategoryIDDataGridViewTextBoxColumn";
-            this.productSubcategoryIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productSubcategoryIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productModelIDDataGridViewTextBoxColumn
-            // 
-            this.productModelIDDataGridViewTextBoxColumn.DataPropertyName = "ProductModelID";
-            this.productModelIDDataGridViewTextBoxColumn.HeaderText = "ProductModelID";
-            this.productModelIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productModelIDDataGridViewTextBoxColumn.Name = "productModelIDDataGridViewTextBoxColumn";
-            this.productModelIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productModelIDDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // sellStartDateDataGridViewTextBoxColumn
-            // 
-            this.sellStartDateDataGridViewTextBoxColumn.DataPropertyName = "SellStartDate";
-            this.sellStartDateDataGridViewTextBoxColumn.HeaderText = "SellStartDate";
-            this.sellStartDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sellStartDateDataGridViewTextBoxColumn.Name = "sellStartDateDataGridViewTextBoxColumn";
-            this.sellStartDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellStartDateDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // sellEndDateDataGridViewTextBoxColumn
-            // 
-            this.sellEndDateDataGridViewTextBoxColumn.DataPropertyName = "SellEndDate";
-            this.sellEndDateDataGridViewTextBoxColumn.HeaderText = "SellEndDate";
-            this.sellEndDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sellEndDateDataGridViewTextBoxColumn.Name = "sellEndDateDataGridViewTextBoxColumn";
-            this.sellEndDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sellEndDateDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // discontinuedDateDataGridViewTextBoxColumn
-            // 
-            this.discontinuedDateDataGridViewTextBoxColumn.DataPropertyName = "DiscontinuedDate";
-            this.discontinuedDateDataGridViewTextBoxColumn.HeaderText = "DiscontinuedDate";
-            this.discontinuedDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.discontinuedDateDataGridViewTextBoxColumn.Name = "discontinuedDateDataGridViewTextBoxColumn";
-            this.discontinuedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.discontinuedDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // rowguidDataGridViewTextBoxColumn
-            // 
-            this.rowguidDataGridViewTextBoxColumn.DataPropertyName = "rowguid";
-            this.rowguidDataGridViewTextBoxColumn.HeaderText = "rowguid";
-            this.rowguidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rowguidDataGridViewTextBoxColumn.Name = "rowguidDataGridViewTextBoxColumn";
-            this.rowguidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rowguidDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // modifiedDateDataGridViewTextBoxColumn
-            // 
-            this.modifiedDateDataGridViewTextBoxColumn.DataPropertyName = "ModifiedDate";
-            this.modifiedDateDataGridViewTextBoxColumn.HeaderText = "ModifiedDate";
-            this.modifiedDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.modifiedDateDataGridViewTextBoxColumn.Name = "modifiedDateDataGridViewTextBoxColumn";
-            this.modifiedDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modifiedDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productBindingSource2
-            // 
-            this.productBindingSource2.DataSource = typeof(TareaDI01.Product);
             // 
             // numericUpDown1
             // 
@@ -460,13 +201,117 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Filtres:";
             // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataSource = typeof(TareaDI01.Product);
-            // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(TareaDI01.Product);
+            // 
+            // productModelDataGridViewTextBoxColumn
+            // 
+            this.productModelDataGridViewTextBoxColumn.DataPropertyName = "ProductModel";
+            this.productModelDataGridViewTextBoxColumn.HeaderText = "ProductModel";
+            this.productModelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productModelDataGridViewTextBoxColumn.Name = "productModelDataGridViewTextBoxColumn";
+            this.productModelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productModelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productNumberDataGridViewTextBoxColumn
+            // 
+            this.productNumberDataGridViewTextBoxColumn.DataPropertyName = "ProductNumber";
+            this.productNumberDataGridViewTextBoxColumn.HeaderText = "ProductNumber";
+            this.productNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productNumberDataGridViewTextBoxColumn.Name = "productNumberDataGridViewTextBoxColumn";
+            this.productNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.colorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // listPriceDataGridViewTextBoxColumn
+            // 
+            this.listPriceDataGridViewTextBoxColumn.DataPropertyName = "ListPrice";
+            this.listPriceDataGridViewTextBoxColumn.HeaderText = "ListPrice";
+            this.listPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.listPriceDataGridViewTextBoxColumn.Name = "listPriceDataGridViewTextBoxColumn";
+            this.listPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.listPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sizeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productLineDataGridViewTextBoxColumn
+            // 
+            this.productLineDataGridViewTextBoxColumn.DataPropertyName = "ProductLine";
+            this.productLineDataGridViewTextBoxColumn.HeaderText = "ProductLine";
+            this.productLineDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productLineDataGridViewTextBoxColumn.Name = "productLineDataGridViewTextBoxColumn";
+            this.productLineDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productLineDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // classDataGridViewTextBoxColumn
+            // 
+            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
+            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
+            this.classDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
+            this.classDataGridViewTextBoxColumn.ReadOnly = true;
+            this.classDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // styleDataGridViewTextBoxColumn
+            // 
+            this.styleDataGridViewTextBoxColumn.DataPropertyName = "Style";
+            this.styleDataGridViewTextBoxColumn.HeaderText = "Style";
+            this.styleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.styleDataGridViewTextBoxColumn.Name = "styleDataGridViewTextBoxColumn";
+            this.styleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.styleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // subCategoryDataGridViewTextBoxColumn
+            // 
+            this.subCategoryDataGridViewTextBoxColumn.DataPropertyName = "SubCategory";
+            this.subCategoryDataGridViewTextBoxColumn.HeaderText = "SubCategory";
+            this.subCategoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.subCategoryDataGridViewTextBoxColumn.Name = "subCategoryDataGridViewTextBoxColumn";
+            this.subCategoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subCategoryDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form1
             // 
@@ -490,9 +335,7 @@
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -502,7 +345,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn recorderPointDataGridViewTextBoxColumn;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
@@ -511,36 +353,22 @@
         private System.Windows.Forms.Label resultsPerPageText;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.BindingSource productBindingSource1;
-        private System.Windows.Forms.BindingSource productBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn makeFlagDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn finishedGoodsFlagDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn safetyStockLevelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reorderPointDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn standardCostDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn listPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeUnitMeasureCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightUnitMeasureCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn daysToManufactureDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productLineDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn classDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn styleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productSubcategoryIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productModelIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellStartDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellEndDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discontinuedDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rowguidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modifiedDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox comboFilter;
         private System.Windows.Forms.ComboBox comboSelectedFilter;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productModelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn listPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productLineDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn classDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn styleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subCategoryDataGridViewTextBoxColumn;
     }
 }
 

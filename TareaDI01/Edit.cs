@@ -12,12 +12,16 @@ namespace TareaDI01
 {
     public partial class Edit : Form
     {
-        Product product;
+        Product productModel;
+        List<string> ProductNumbers;
+        List<Product> Products;
+        bool loadProduct = false;
         public Edit(Product product)
         {
-            this.product = product;
+            this.productModel = product;
+            this.Text = "Editar " + product.ProductModel;
+            ProductNumbers = product.ProductNumber.Split(new char[] { ';' }).ToList();
             InitializeComponent();
-            this.Text = "Editar Producte: " + product.ProductID;
             setData();
 
         }
@@ -29,67 +33,38 @@ namespace TareaDI01
 
         private void setData()
         {
-            numericProductID.Value = product.ProductID;
-            textName.Text = product.Name;
-            textProductNumber.Text = product.ProductNumber;
-            checkMakeFlag.Checked = product.MakeFlag;
-            checkFinishedGoodsFlag.Checked = product.FinishedGoodsFlag;
-            textColor.Text = product.Color;
-            numericSafetyStockLevel.Value = product.SafetyStockLevel;
-            numericReorderPoint.Value = product.ReorderPoint;
-            numericStandardCost.Value = product.StandardCost;
-            numericListPrice.Value = product.ListPrice;
-            textSize.Text = product.Size;
-            textSizeUnitMeasureCode.Text = product.SizeUnitMeasureCode;
-            textWeightUnitMeasureCode.Text = product.WeightUnitMeasureCode;
-            numericWeight.Value = product.Weight;
-            numericDaysToManufacture.Value = product.DaysToManufacture;
-            textProductLine.Text = product.ProductLine;
-            textClass.Text = product.Class;
-            textStyle.Text = product.Style;
-            numericProductSubcategoryID.Value = product.ProductSubcategoryID;
-            numericProductModelID.Value = product.ProductModelID;
-            DateTime nulldate = new DateTime(1,1,1);
-            if (product.SellStartDate > dateSellStartDate.MinDate)
-            {
-                dateSellStartDate.Value = product.SellStartDate;
+            DataAcces db = new DataAcces();
+            comboBox1.DataSource = ProductNumbers;
+            Products = db.GetProduct(productModel.ProductModel);
+            showProduct();
+        }
 
+        private void showProduct()
+        {
+            if (loadProduct)
+            {
+                textName.Text = Products.ElementAt(comboBox1.SelectedIndex).Name;
+                textProductNumber.Text = Products.ElementAt(comboBox1.SelectedIndex).ProductNumber;
+                textColor.Text = Products.ElementAt(comboBox1.SelectedIndex).Color;
+                textDescription.Text = Products.ElementAt(comboBox1.SelectedIndex).Description;
+                textClass.Text = Products.ElementAt(comboBox1.SelectedIndex).Class;
+                textProductModel.Text = Products.ElementAt(comboBox1.SelectedIndex).ProductModel;
+                textListPrice.Text = Products.ElementAt(comboBox1.SelectedIndex).ListPrice;
+                textSize.Text = Products.ElementAt(comboBox1.SelectedIndex).Size;
+                textProductLine.Text = Products.ElementAt(comboBox1.SelectedIndex).ProductLine;
+                textClass.Text = Products.ElementAt(comboBox1.SelectedIndex).Class;
+                textStyle.Text = Products.ElementAt(comboBox1.SelectedIndex).Style;
+                textCategory.Text = Products.ElementAt(comboBox1.SelectedIndex).Category;
+                textSubCategory.Text = Products.ElementAt(comboBox1.SelectedIndex).SubCategory;
             } else
             {
-                checkNullSellStartDate.Checked = true;
+                loadProduct = true;
             }
-            if (product.SellEndDate > dateSellEndDate.MinDate)
-            {
-                dateSellEndDate.Value = product.SellEndDate;
+        }
 
-            }
-            else
-            {
-                checkNullSellEndDate.Checked = true;
-            }
-            if (product.DiscontinuedDate > dateDiscontinuedDate.MinDate)
-            {
-                dateDiscontinuedDate.Value = product.DiscontinuedDate;
-
-            }
-            else
-            {
-                checkNullDiscontinuedDate.Checked = true;
-
-            }
-            textRowguid.Text = product.rowguid.ToString();
-            if (product.ModifiedDate > dateModifiedDate.MinDate)
-            {
-                dateModifiedDate.Value = product.ModifiedDate;
-
-            }
-            else
-            {
-                checkNullModifiedDate.Checked = true;
-            }
-
-
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showProduct();
         }
     }
 }

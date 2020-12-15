@@ -55,6 +55,7 @@ namespace TareaDI01
                     page = (int)numericUpDown1.Value;
                 products = db.GetProducts(int.Parse(resultsPerPage.SelectedItem.ToString()), page, filters);
                 int countProducts = db.CountProducts(filters);
+                Console.WriteLine(countProducts);
                 numericUpDown1.Maximum = countProducts / int.Parse(resultsPerPage.SelectedItem.ToString());
                 label2.Text = "de " + countProducts / int.Parse(resultsPerPage.SelectedItem.ToString());
                 if (countProducts / int.Parse(resultsPerPage.SelectedItem.ToString()) < 1)
@@ -79,9 +80,20 @@ namespace TareaDI01
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-        Product product = products[e.RowIndex];
-        Edit EditForm = new Edit(product);
-        EditForm.Show();
+            Product product = products[e.RowIndex];
+
+            bool Isopen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text.Contains("Editar"))
+                {
+                    Isopen = true;
+                    f.Close();
+                    break;
+                }
+            }
+            Edit EditForm = new Edit(product);
+            EditForm.Show();
         }
 
         private void comboFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,6 +121,12 @@ namespace TareaDI01
                         }
                     }
                 }
+                if (comboFilter.Text == "SellEndDate")
+                {
+                    comboSelectedFilter.Items.Clear();
+                    comboSelectedFilter.Items.Add("NULL");
+                    comboSelectedFilter.Items.Add("NOT NULL");
+                }
                 if (comboFilter.Text == "")
                 {
                     comboSelectedFilter.Items.Clear();
@@ -121,6 +139,11 @@ namespace TareaDI01
         private void comboSelectedFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateData();
+        }
+
+        private void productBindingSource5_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
