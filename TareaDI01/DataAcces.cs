@@ -53,7 +53,6 @@ namespace TareaDI01
                 " STUFF((SELECT DISTINCT '; '+p.Size FROM Production.Product p WHERE p.ProductModelID = pp.ProductModelID FOR XML PATH('')), 1, 1, '') AS Size, pp.ProductLine, pp.Class,"+
                 " pp.Style, Production.ProductCategory.Name AS Category, Production.ProductSubcategory.Name AS SubCategory FROM Production.Product pp" + joins+ " ORDER BY ProductModel OFFSET " + page * limit+" ROWS FETCH FIRST "+limit+" ROWS ONLY";
 
-                Console.WriteLine(select);
                 return connection.Query<Product>(select).ToList();
             }
         }
@@ -77,7 +76,6 @@ namespace TareaDI01
                 " pp.Size, pp.ProductLine, pp.Class," +
                 " pp.Style, Production.ProductCategory.Name AS Category, Production.ProductSubcategory.Name AS SubCategory FROM Production.Product pp" + joins;
 
-                Console.WriteLine(select);
                 return connection.Query<Product>(select).ToList();
             }
         }
@@ -142,7 +140,7 @@ namespace TareaDI01
                     joins += " INNER JOIN Production.ProductDescription ON Production.ProductModelProductDescriptionCulture.ProductDescriptionID = Production.ProductDescription.ProductDescriptionID";
                     joins += " WHERE ProductModelProductDescriptionCulture.CultureID = 'en' AND Product.ProductModelID IS NOT NULL ";
                     string select = $"SELECT DISTINCT {col} FROM (SELECT Production.ProductModel.Name AS ProductModel, Production.ProductDescription.Description, Production.Product.Name, Production.Product.ProductNumber, Production.Product.Color, Production.Product.ListPrice, Production.Product.Size, Production.Product.ProductLine, Production.Product.Class, Production.Product.Style, Production.ProductCategory.Name AS Category, Production.ProductSubcategory.Name AS SubCategory FROM Production.Product {joins}) AS ProductsList";
-                    Console.WriteLine(select);
+
                     return connection.Query<string>(select).ToList();
 
                 } else

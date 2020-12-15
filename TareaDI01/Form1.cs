@@ -55,9 +55,13 @@ namespace TareaDI01
                     page = (int)numericUpDown1.Value;
                 products = db.GetProducts(int.Parse(resultsPerPage.SelectedItem.ToString()), page, filters);
                 int countProducts = db.CountProducts(filters);
-                Console.WriteLine(countProducts);
-                numericUpDown1.Maximum = countProducts / int.Parse(resultsPerPage.SelectedItem.ToString());
-                label2.Text = "de " + countProducts / int.Parse(resultsPerPage.SelectedItem.ToString());
+                int pages = countProducts / int.Parse(resultsPerPage.SelectedItem.ToString());
+                if (int.Parse(resultsPerPage.SelectedItem.ToString()) * pages < countProducts)
+                {
+                    pages++;
+                }
+                numericUpDown1.Maximum = pages;
+                label2.Text = "de " + pages;
                 if (countProducts / int.Parse(resultsPerPage.SelectedItem.ToString()) < 1)
                 {
                     update = false;
